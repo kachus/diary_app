@@ -42,10 +42,13 @@ class CreateRecord(View):
         form = UserInfoForm
         return render(request, 'from_example.html', {'form': form})
     def post(self, request, *args, **kwargs):
+        print('here')
         form = UserInfoForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse('success')
+            return render(request, 'success.html')
+            # return render(request, 'created_record.html', {'form' : form})
+
         return HttpResponse('error')
 
 
