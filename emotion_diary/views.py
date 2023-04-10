@@ -36,7 +36,7 @@ class UserInfoView(View):
 class AddedInfo(View):
     model = UserInfo
 
-'''''
+
 class CreateRecord(View):
     def get(self, request, *args, **kwargs):
         form = UserInfoForm
@@ -47,20 +47,19 @@ class CreateRecord(View):
             form.save()
             return HttpResponse('success')
         return HttpResponse('error')
-'''
-
-class CreateRecord(View):
-    def get(self, request, *args, **kwargs):
-        form = DiaryRecordForm
-        return render(request, 'new_diary.html', {'form': form})
-
-    def post(self, request, *args, **kwargs):
-        form = DiaryRecordForm(request.POST)
-        if form.is_valid():
-            situation = form.cleaned_data['situation']
-            emotions = form.cleaned_data['emotions']
-
-        return HttpResponse(form)
 
 
-
+#
+# class CreateRecord(View):
+#     def get(self, request, *args, **kwargs):
+#         form = DiaryRecordForm
+#         return render(request, 'new_diary.html', {'form': form})
+#
+#     def post(self, request, *args, **kwargs):
+#         form = DiaryRecordForm(request.POST)
+#         if form.is_valid():
+#             situation = form.cleaned_data['situation']
+#             emotions = form.cleaned_data['emotions']
+#
+#         return HttpResponse(form)
+#

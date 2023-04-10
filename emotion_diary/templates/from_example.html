@@ -86,12 +86,8 @@
 		{% csrf_token %}
 
 		<div class="form-control">
-			<label> Situation  </label>
-			<input id="situation" type="text" >
-			{{ form.as_p }}
-
+			<label class="required-field"> {{ form.as_p }}  </label>
 		</div>
-
 
 
 		<!-- Multi-line Text Input Control -->

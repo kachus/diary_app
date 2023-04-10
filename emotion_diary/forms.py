@@ -9,6 +9,10 @@ class TestForm(forms.Form):
 
 
 class UserInfoForm(ModelForm):
+    required_css_class = 'required-filed'
+    situation = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control"}))
+    emotions = forms.CharField(widget=forms.TextInput(attrs={"class": "form-control"}))
+
     class Meta:
         model = UserInfo
         fields = ['user', 'situation', 'thoughts', 'emotions', 'conclusion']
