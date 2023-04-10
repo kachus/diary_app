@@ -10,12 +10,23 @@ class TestForm(forms.Form):
 
 class UserInfoForm(ModelForm):
     required_css_class = 'required-filed'
-    situation = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control"}))
-    emotions = forms.CharField(widget=forms.TextInput(attrs={"class": "form-control"}))
+
+    situation = forms.CharField(widget=forms.Textarea(attrs={"class":"form-control",
+                                                              "placeholder":'Опишите ситуацию',
+                                                              "rows":3}))
+    thoughts = forms.CharField(widget=forms.Textarea(attrs={"class":"form-control",
+                                                              "placeholder":'Опишите свои мысли',
+                                                            "rows":3}))
+    emotions = forms.CharField(widget=forms.Textarea(attrs={"class": "form-control",
+                                                             "placeholder":'Опишите свои эмоции',
+                                                            "rows":3}))
+    conclusion = forms.CharField(widget=forms.Textarea(attrs={"class": "form-control",
+                                                             "placeholder": 'Опишите, к какому заключению вы пришли',
+                                                              "rows":3}))
 
     class Meta:
         model = UserInfo
-        fields = ['user', 'situation', 'thoughts', 'emotions', 'conclusion']
+        fields = [ 'user','situation', 'thoughts', 'emotions', 'conclusion']
 
 
 class DiaryRecordForm(forms.Form):
