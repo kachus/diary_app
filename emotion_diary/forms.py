@@ -43,7 +43,8 @@ class UserInfoForm(ModelForm):
 
     class Meta:
         model = UserInfo
-        fields = ('situation', 'thoughts', 'emotions', 'conclusion')
+
+        fields = ('user','situation', 'thoughts', 'emotions', 'conclusion')  #mb make user hidden field?
         # widgets = {
         #
         #     'situation' : forms.Textarea(attrs={"class":"form-control",
@@ -51,15 +52,15 @@ class UserInfoForm(ModelForm):
         #                                                  "rows":3,
         #                                                   }),
         # }
-        labels = {
-            'user': 'User',
-            'situation' : 'Что произошло?',
-            'thoughts' : 'О чем ты подумал/а?',
-            'emotions' : 'Какие эмоции испытал/а?',
-            'conclusion' : 'Какой вывод ты можешь сделать?'
-
-        }
-
+        # labels = {
+        #     'user': 'User',
+        #     'situation' : 'Что произошло?',
+        #     'thoughts' : 'О чем ты подумал/а?',
+        #     'emotions' : 'Какие эмоции испытал/а?',
+        #     'conclusion' : 'Какой вывод ты можешь сделать?'
+        #
+        # }
+        #
 
 
 

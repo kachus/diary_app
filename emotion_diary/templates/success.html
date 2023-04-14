@@ -17,9 +17,44 @@
 		Font, Alignment */
 		body {
 			background-color: #F8CDDF;
-			font-family: Verdana;
+			font-family: Helvetica Neue;
 			text-align: center;
+
 		}
+
+		/* CSS */
+		button {
+  		background-color: #EA4C89;
+    	border-radius: 8px;
+    	border-style: none;
+    	box-sizing: border-box;
+    	color: #FFFFFF;
+    	cursor: pointer;
+    	display: inline-block;
+    	font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    	font-size: 14px;
+    	font-weight: 500;
+    	height: 40px;
+    	line-height: 20px;
+    	list-style: none;
+    	margin: 0;
+    	outline: none;
+    	padding: 10px 16px;
+    	position: relative;
+    	text-align: center;
+    	text-decoration: none;
+    	transition: color 100ms;
+    	vertical-align: baseline;
+    	user-select: none;
+    	-webkit-user-select: none;
+    	touch-action: manipulation;
+  	}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #F082AC;
+}
+
 
     </style>
         <div class="vh-100 d-flex justify-content-center align-items-center">
@@ -27,17 +62,21 @@
                 <div class="border border-2 border-light"></div>
                 <div class="card  bg-white shadow p-5">
                     <div class="mb-4 text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75"
-                            fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                            <path
-                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-                        </svg>
+                        <svg style="color: rgb(234, 117, 203);" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 512 512"><title>ionicons-v5-e</title><path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" fill="#ea75cb"></path><polyline points="352 176 217.6 336 160 272" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></polyline></svg>
+<!--                        <svg style="color: rgb(234, 117, 203);" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-e</title><path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" fill="#ea75cb"></path><polyline points="352 176 217.6 336 160 272" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></polyline></svg>-->
+<!--                        <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75"-->
+<!--                            fill="currentColor"  class="bi bi-check-circle" viewBox="0 0 16 16">-->
+<!--                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />-->
+<!--                            <path-->
+<!--                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />-->
+<!--                        </svg>-->
                     </div>
                     <div class="text-center">
                         <h1> Запись сделана </h1>
+                         <p> </p>
                         <p> Отлично, ты внес запись в свой дневник эмоций, молодец! </p>
-                        <button class="btn btn-outline-success">Back Home</button>
+                        <button>Посмотреть свои записи</button>
+<!--                        <button class="btn btn-outline-success">Посмотреть свои записи</button>-->
                     </div>
                 </div>
             </div>
